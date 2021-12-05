@@ -7,7 +7,7 @@ const Sequelize = require('sequelize');
 class Database {
   constructor() {
     this.sequelize = new Sequelize(
-      'database_name',
+      'file_loader',
       'postgres',
       '12345',
       {

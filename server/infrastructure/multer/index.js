@@ -1,8 +1,8 @@
 'use strict'
 
-const fs = require("fs");
-const service = require("../../application");
-const repository = require("../../infrastructure/repository");
+const fs = require('fs');
+const service = require('../../application');
+const repository = require('../repository');
 
 module.exports = async (req, file, callback) => {
     try {
