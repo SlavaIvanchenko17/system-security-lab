@@ -49,8 +49,26 @@ const uploadFile = async (req, res) => {
 
 const createUser = async (req, res) => {
   try {
-    const passwordLength = req.body.password.split('').length;
-    if (passwordLength === 5) {
+    const password = req.body.password.split('');
+    const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+
+    //check if first symbol is upper case
+    if (password[0] === password[0].toLowerCase()) {
+      res.json('First symbol must be upper case');
+    }
+
+    //check if first symbol is not empty
+    if (password[0] === '') {
+      res.json('First symbol must not be empty');
+    }
+
+    //check if password includes numbers
+    const numbersInPassword = password.filter(symbol => numbers.includes(symbol));
+    if (!numbersInPassword.length) {
+      res.json('password must includes numbers');
+    }
+
+    if (password.length === 5) {
       await service.createUser(req.body, repositories);
       res.json('create User');
     } else {
