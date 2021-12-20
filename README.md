@@ -13,3 +13,15 @@ npm run setup
 ```
 npm start
 ```
+## Run lab4:
+```
+npm lab4
+```
+## Run lab5:
+```
+npm lab5
+```
+## Run lab6:
+```
+npm lab6
+```

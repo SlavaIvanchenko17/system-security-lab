@@ -7,6 +7,9 @@
     "build": "npm install",
     "setup": "bash ./db/setup.sh",
     "start": "node ./server/interfaces/server",
+    "lab4": "node ./lab4",
+    "lab5": "node ./lab5",
+    "lab6": "node ./lab6",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
